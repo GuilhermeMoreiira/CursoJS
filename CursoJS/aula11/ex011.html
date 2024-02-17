@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+        input {
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+        }
+        h1 {
+            text-align: center;
+        }
+        body {
+            margin: 230px;
+            font: normal 20px arial;
+            text-align: center;
+            background: rgb(72, 151, 216);
+            color: rgb(0, 0, 0)
+        }
+    </style>
+</head>
+<h1>Me conte sobre você!</h1>
+Em qual país você mora? <input type="tel" name="txtp" id="txtp">
+<input type="button" value="Enviar" onclick="enviar()">
+<div id="res">
+
+<script>
+    
+    function enviar() {
+        var txtp = window.document.querySelector('input#txtp')
+        var res = window.document.querySelector('div#res')
+        var v = (txtp.value)
+        res.innerHTML = `<p>Você mora no <strong>${v}!</strong></p>`
+        if (v == v) {
+            res.innerHTML += `<p>Você é <strong>Brasileiro(a)</strong></p>`
+        }else {
+            re.innerHTML += `Você é estrangeiro(a)`
+        }
+    }
+</script>
+<body>
+    
+</body>
+</html>
